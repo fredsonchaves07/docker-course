@@ -1,0 +1,9 @@
+services:
+  container_name: identidock
+  build: .
+  ports: 
+    - 5000:5000
+  volumes: 
+    - ./app:/app
+  environment:
+    ENV: DEV
