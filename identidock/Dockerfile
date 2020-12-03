@@ -2,7 +2,7 @@ FROM python:latest
 # Adiciona um grupo de usuario do wsgi ao root -> Recomendação do wsgi não é
 # Executar o wsgi com o usuário root
 RUN groupadd -r uwsgi && useradd -r -g uwsgi uwsgi
-RUN pip install Flask uWSGI requests
+RUN pip install Flask uWSGI requests redis
 WORKDIR /app
 COPY app /app
 COPY cmd.sh /
