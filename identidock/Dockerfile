@@ -1,6 +1,6 @@
 FROM python:latest
-# Adiciona um grupo de usuario do wsgi ao root -> Recomendação do wsgi não é
-# Executar o wsgi com o usuário root
+# Adiciona um grupo de usuario do wsgi ao root -> Recomendaï¿½ï¿½o do wsgi nï¿½o ï¿½
+# Executar o wsgi com o usuï¿½rio root
 RUN groupadd -r uwsgi && useradd -r -g uwsgi uwsgi
 RUN pip install Flask uWSGI requests redis
 WORKDIR /app
@@ -10,9 +10,9 @@ COPY cmd.sh /
 # Expoe a porta para o host e outros containers
 EXPOSE 9090 9191
 
-# Define o usuário para todas linhas seguintes que sejam executadas como esse usuário
-# Importante sempre utilizar um usuário para evitar que o container seja executado como root
+# Define o usuï¿½rio para todas linhas seguintes que sejam executadas como esse usuï¿½rio
+# Importante sempre utilizar um usuï¿½rio para evitar que o container seja executado como root
 USER uwsgi
 
-# Roda o comando de acordo com o que está no cmd.sh
-CMD ["/cmd.sh"]
+# Roda o comando de acordo com o que estï¿½ no cmd.sh
+
