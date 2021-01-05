@@ -15,4 +15,4 @@ EXPOSE 9090 9191
 USER uwsgi
 
 # Roda o comando de acordo com o que est� no cmd.sh
-
+CMD ["/cmd.sh"]
